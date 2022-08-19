@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="main_view">
+      <header>
+        <h1>My To Do List</h1>
+      </header>
+      <main>
+        <form id="item_input_form">
+          <input
+            type="text"
+            id="add_item"
+            placeholder="Enter your shopping item here!"
+          />
+          <input
+            type="button"
+            onclick="additem()"
+            id="add_button"
+            value="Add"
+          />
+        </form>
+        <div id="items_form">
+          <form class="list_item">
+            <input type="checkbox" id="item_check" onclick="checkItem()" />
+            <input type="text" id="new_item" readonly />
+            <input type="text" id="date_time" />
+            <input
+              type="button"
+              id="remove_item"
+              value="X"
+              onclick="removeItem()"
+            />
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="./js/main.js"></script>
+    <footer></footer>
+  </body>
+</html>
