@@ -4,44 +4,133 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping List</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Fast Food</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" async></script>
   </head>
   <body>
-    <div id="main_view">
-      <header>
-        <h1>My To Do List</h1>
-      </header>
-      <main>
-        <form id="item_input_form">
-          <input
-            type="text"
-            id="add_item"
-            placeholder="Enter your shopping item here!"
+    <header>
+      <div class="header_image">
+        <img
+          src="https://seeklogo.com/images/F/fastfood-logo-D673849A4C-seeklogo.com.png"
+          alt="Logo"
+        />
+      </div>
+      <div class="header_text">
+        <ul>
+          <li class="header_text_items">Home</li>
+          <li class="header_text_items">Contact</li>
+          <li class="header_text_items">About</li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="food_items">
+        <div class="food_item">
+          <img
+            id="cheeseBurgerImg"
+            src="https://statestreetgrill.com/wp-content/uploads/2017/09/shop-single-img1-gallery1.jpg"
+            alt="Cheese burger"
           />
-          <input
-            type="button"
-            onclick="additem()"
-            id="add_button"
-            value="Add"
-          />
-        </form>
-        <div id="items_form">
-          <form class="list_item">
-            <input type="checkbox" id="item_check" onclick="checkItem()" />
-            <input type="text" id="new_item" readonly />
-            <input type="text" id="date_time" />
-            <input
-              type="button"
-              id="remove_item"
-              value="X"
-              onclick="removeItem()"
-            />
-          </form>
+          <div class="food_item_data">
+            <label class="item_name" for="">Cheese Burger</label>
+            <span class="item_price">$5</span>
+            <button class="add_to_cart" onclick="addItem()">Add to Cart</button>
+          </div>
         </div>
-      </main>
-    </div>
-    <script src="./js/main.js"></script>
+        <div class="food_item">
+          <img
+            id="hotDogImg"
+            src="https://baydq.com/media/8d89ba84d958805/dq_chili_cheese_dog.webp?mode=pad&rnd=132519262431730000"
+            alt="Hot Dog"
+          />
+          <div class="food_item_data">
+            <label class="item_name" for="">Hot Dog</label>
+            <span class="item_price">$4</span>
+            <button class="add_to_cart" onclick="addItem()">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food_item">
+          <img
+            id="friesImg"
+            src="https://cdn.shopify.com/s/files/1/0244/3401/6290/products/geko-pre-fried-shoestring-fries-641026_600x600_crop_center.png?v=1626289309"
+            alt="Fries"
+          />
+          <div class="food_item_data">
+            <label class="item_name" for="">Fries</label>
+            <span class="item_price">$2</span>
+            <button class="add_to_cart" onclick="addItem()">Add to Cart</button>
+          </div>
+        </div>
+        <div class="food_item">
+          <img
+            id="colaImg"
+            src="https://atlas-content-cdn.pixelsquid.com/stock-images/coca-cola-glass-with-droplets-soda-rv2Z884-600.jpg"
+            alt="Cola"
+          />
+          <div class="food_item_data">
+            <label class="item_name" for="">Cola</label>
+            <span class="item_price">$1</span>
+            <button class="add_to_cart" onclick="addItem()">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section class="cart_items">
+        <h1>Cart</h1>
+        <div class="total_price_bar">
+          <label for="">Total:</label>
+          <input type="text" class="total_price" readonly />
+        </div>
+        <div class="cart_item">
+          <div class="cart_item_details">
+            <input
+              class="cart_item_count"
+              type="number"
+              min="1"
+              max="999"
+              value="1"
+              onclick="itemTotal()"
+            />
+            <img
+              src="https://cdn.shopify.com/s/files/1/0244/3401/6290/products/geko-pre-fried-shoestring-fries-641026_600x600_crop_center.png?v=1626289309"
+              alt="Fries"
+            />
+            <div class="cart_item_data">
+              <label class="cart_item_name" for="">Fries</label>
+              <span class="cart_item_price">$2</span>
+            </div>
+          </div>
+          <div class="cart_item_control">
+            <input type="text" class="cart_item_total_price" readonly />
+            <button class="remove_item" onclick="removeItem()">X</button>
+          </div>
+        </div>
+        <div class="cart_item">
+          <div class="cart_item_details">
+            <input
+              class="cart_item_count"
+              type="number"
+              min="1"
+              max="999"
+              value="1"
+              onclick="itemTotal()"
+            />
+            <img
+              src="https://statestreetgrill.com/wp-content/uploads/2017/09/shop-single-img1-gallery1.jpg"
+              alt="Fries"
+            />
+            <div class="cart_item_data">
+              <label class="cart_item_name" for="">Cheese Burger</label>
+              <span class="cart_item_price">$5</span>
+            </div>
+          </div>
+          <div class="cart_item_control">
+            <input type="text" class="cart_item_total_price" readonly />
+            <button class="remove_item" onclick="removeItem()">X</button>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
