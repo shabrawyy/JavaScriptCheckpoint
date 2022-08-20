@@ -145,6 +145,7 @@ span {
   color: white;
   background-color: brown;
   border: 0ch;
+  width: 320px;
 }
 
 .cart_item {
@@ -214,4 +215,16 @@ span {
   border: 0ch;
   font-size: large;
   font-weight: bolder;
+}
+
+.footer_background {
+  width: 100%;
+  height: 80px;
+  background-color: brown;
+}
+
+.footer_area {
+  width: 100%;
+  height: 90%;
+  background-color: white;
 }
